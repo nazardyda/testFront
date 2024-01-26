@@ -8,8 +8,8 @@ const PostModal = ({children, visible, setVisible}) => {
     }
 
     return (
-        <div className={rootClasses.join(' ')}>
-            <div className={classes.postModalContent}>
+        <div className={rootClasses.join(' ')} onClick={()=>setVisible(false)}>
+            <div className={classes.postModalContent} onClick={(e=>e.stopPropagation())}>
                 {children}
             </div>
         </div>
